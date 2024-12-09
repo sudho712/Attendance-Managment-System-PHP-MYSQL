@@ -1,16 +1,20 @@
 <?php
-$path = $_SERVER['DOCUMENT_ROOT'];
+$path = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/';
 require_once $path . "ATTEND/database/connect.php";
+
 $dbo = new Database();
-$c = "create table student_details
-(
-    id int auto_increment primary key,
-    roll_no varchar(20) unique,
-    name varchar(50)
+
+$c = "CREATE TABLE student_details (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    roll_no VARCHAR(20) UNIQUE,
+    name VARCHAR(50)
 )";
 
-$s = $dbo->conn->prepare($c);
 try {
+    $s = $dbo->conn->prepare($c);
     $s->execute();
+    echo "<br> Table student_details created successfully";
 } catch (PDOException $o) {
+    echo "<br> Table student_details not created: " . $o->getMessage();
 }
+?>
