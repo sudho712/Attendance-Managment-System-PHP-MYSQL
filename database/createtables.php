@@ -20,6 +20,23 @@ try {
     echo "<br> Table student_details not created: " . $o->getMessage();
 }
  */
+
+$c="create table course_allotment
+(
+    faculty_id int,
+    course_id int,
+    session_id int,
+    primary key (faculty_id, course_id, session_id)
+)
+" ;
+try{
+    $s=$dbo->conn->prepare($c);
+    $s->execute();
+    echo "<br> course table create success fully";
+}catch (PDOException $o)
+{
+    echo "<br> course table not created ".$o->getMessage();
+}/* 
 $c = "create table attendance_details
 (
     faculty_id int,
@@ -37,4 +54,4 @@ try{
 }catch (PDOException $o){
     echo "<br> attendance table not create ".$o->getMessage();
 }
-?>
+ */?>
