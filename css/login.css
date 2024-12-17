@@ -72,7 +72,8 @@ body{
     
     display: flex;
     justify-content: end;
-    align-items: center;    
+    align-items: center; 
+       
 
 }
 .btn-login{
