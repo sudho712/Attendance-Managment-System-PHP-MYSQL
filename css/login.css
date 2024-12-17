@@ -12,7 +12,7 @@ body{
     align-items: center;
 }
 .login-form{
-    width: min(900px,95%);
+    width: min(450px,95%);
     height: 500px;
     border: solid 1px blue;
     display: flex;
@@ -20,8 +20,14 @@ body{
     flex-direction: column;
 
     justify-content: center;
+    background-color:transparent;
+    border-radius: 10px;
     align-items: center;
 
+}
+
+.login-form:hover{
+    box-shadow: 0 0 100px rgb(121, 97, 239) ,0 0 400px 20 rgb(121, 97, 239);
 }
 .input-group{
     position: relative;
@@ -75,4 +81,13 @@ body{
     height: 50px;
     padding: 5px;
     border-radius: 5px;
+}
+.btn-login:hover{
+    box-shadow: 0 0 40px rgb(137, 88 ,242);
+}
+.inactivecolor{
+    background-color: rgb(13, 13, 188);
+}
+.activecolor{
+    background-color: rgb(50, 168, 247);
 }
