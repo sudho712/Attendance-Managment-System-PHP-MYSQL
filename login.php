@@ -23,9 +23,12 @@
         </div>
 
         <div class="div-btn-login top-margin">
-            <button class="btn-login">LOGIN</button>
+            <button class="btn-login inactivecolor" id="btnLogin">LOGIN</button>
         </div>
     </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
